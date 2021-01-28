@@ -61,3 +61,11 @@ fun ViewGroup.inflateNullRoot(@LayoutRes resource: Int): View {
         false
     )
 }
+
+fun View.xVisibility(block: () -> Boolean) {
+    if (block()){
+        this.visibility = View.VISIBLE
+    }else{
+        this.visibility = View.GONE
+    }
+}
