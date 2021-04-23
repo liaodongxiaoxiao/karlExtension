@@ -6,7 +6,7 @@ plugins {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         minSdkVersion 16
@@ -43,13 +43,14 @@ dependencies {
     //androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     //androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     api 'com.google.code.gson:gson:2.8.6'
+    api 'androidx.recyclerview:recyclerview:1.1.0'
 }
 
 publish {
     userOrg = 'liaodongxiaoxiao'
     groupId = 'com.karl.kotlin.extension'
     artifactId = 'karl-ktx'
-    publishVersion = '1.0'
+    publishVersion = '1.0.1'
     desc = 'Kotlin extensions for Android'
     website = 'http://coder-karl.com/'
 }
