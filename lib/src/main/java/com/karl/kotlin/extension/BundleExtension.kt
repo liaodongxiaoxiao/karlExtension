@@ -1,4 +1,4 @@
-package com.ftms.superapp.mall.extension
+package com.karl.kotlin.extension
 
 import android.os.Bundle
 import android.os.Parcelable
