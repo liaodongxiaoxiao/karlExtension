@@ -8,7 +8,7 @@
 ### 使用方法
 1.把**karl_ktx_version.aar**文件拷到**app/libs**文件夹下   
 
-2.在app/build.gradle**android{}**中添加   
+2.在app/build.gradle **android{}** 中添加   
 ```xml
 repositories {
   flatDir {
@@ -17,7 +17,7 @@ repositories {
 }
 ```
 
-3.在dependencies{}中添加引用   
+3.在app/build.gradle **dependencies{}** 中添加引用   
  ```xml
  implementation(name:'karl_ktx_version', ext:'aar')
 ```
