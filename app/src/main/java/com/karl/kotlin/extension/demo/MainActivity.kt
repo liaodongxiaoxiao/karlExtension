@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
 import androidx.core.widget.addTextChangedListener
+import com.karl.kotlin.extension.justStartActivity
 import com.karl.kotlin.extension.setTextEndWithStar
 import com.karl.kotlin.extension.xVisibility
 import kotlinx.android.synthetic.main.activity_main.*
@@ -18,6 +19,10 @@ class MainActivity : AppCompatActivity() {
         et_input.addTextChangedListener { it ->
             iv_error.xVisibility { !isOddNumber(it) }
             iv_correct.xVisibility { isOddNumber(it) }
+        }
+
+        btn_jump.setOnClickListener {
+            this@MainActivity.justStartActivity(SecondActivity::class.java)
         }
     }
 

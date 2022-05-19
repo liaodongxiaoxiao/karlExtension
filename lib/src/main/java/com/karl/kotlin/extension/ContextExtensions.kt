@@ -1,6 +1,8 @@
 package com.karl.kotlin.extension
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.widget.Toast
 import androidx.annotation.StringRes
 
@@ -23,4 +25,8 @@ fun Context.putSP(key: String, value: String, name: String = "sp_karl") {
     this.getSharedPreferences(name, Context.MODE_PRIVATE).edit().apply {
         this.putString(key, value)
     }.apply()
+}
+
+inline fun <T : Activity> Context.justStartActivity(clazz: Class<T>){
+    this.startActivity(Intent(this,clazz))
 }
