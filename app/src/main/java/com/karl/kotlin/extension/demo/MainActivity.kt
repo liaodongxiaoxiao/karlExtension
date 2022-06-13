@@ -1,5 +1,6 @@
 package com.karl.kotlin.extension.demo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -22,7 +23,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn_jump.setOnClickListener {
-            this@MainActivity.justStartActivity(SecondActivity::class.java)
+            //this@MainActivity.justStartActivity(SecondActivity::class.java)
+            val data = Data("Jim",2002)
+            val intent = Intent(this@MainActivity,SecondActivity::class.java)
+                .apply {
+                    putExtra(Constant.KEY_NAME,"TOM")
+                    putExtra(Constant.KEY_PA,data)
+                }
+            startActivity(intent)
         }
     }
 
