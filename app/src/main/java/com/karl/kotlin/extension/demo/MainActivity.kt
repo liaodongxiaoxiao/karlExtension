@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
                 .apply {
                     putExtra(Constant.KEY_NAME,"TOM")
                     putExtra(Constant.KEY_PA,data)
+                    putExtra("age","age123")
                 }
             startActivity(intent)
         }
